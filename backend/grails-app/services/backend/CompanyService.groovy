@@ -23,8 +23,4 @@ class CompanyService {
         print("\nTOTAL TIME: " + System.currentTimeMillis() - start)
         print("\nNUMBER OF QUOTES: " + newStock.size())
     }
-
-    def getCompanies(){
-        return Company.count();
-    }
 }
