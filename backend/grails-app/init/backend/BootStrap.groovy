@@ -18,7 +18,7 @@ class BootStrap {
         company3.stocks = []
 
 
-
+        //SET TIME
         Calendar start = Calendar.getInstance()
         start.setTime(new Date())
         start.set(Calendar.HOUR_OF_DAY, 10)
@@ -41,7 +41,7 @@ class BootStrap {
         def destroy = {
         }
 
-
+    //GENERATES STOCK VALUE AND SAVES DATA
     void initData(Calendar start, Calendar end, Company company){
         Random random = new Random()
         Calendar inicio  = Calendar.getInstance()

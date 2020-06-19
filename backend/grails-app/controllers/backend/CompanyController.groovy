@@ -9,7 +9,7 @@ class CompanyController {
     def index() {
 
     }
-
+    //RETURNS A LIST OF COMPANIES IN FORMAT JSON
     def getCompanyDetails(){
         render(companyService.getCompanies() as JSON)
     }

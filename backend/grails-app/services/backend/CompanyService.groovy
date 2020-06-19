@@ -9,13 +9,14 @@ class CompanyService {
 
     }
 
+    //SEARCH FOR ALL STOCKS IN THE LAST HOURS
     def getStocks(String company, int hours){
         //SET TIME
         long start = System.currentTimeMillis()
         Calendar date = Calendar.getInstance()
         date.setTime(new Date())
         date.add(Calendar.HOUR_OF_DAY, -hours)
-        //searching
+        //SEARCHING
         def newCompany = Company.findByName(company)
         def newStock = newCompany ? Stock.findAllByCompanyAndPriceDateBetween(newCompany, date.getTime(), new Date()): []
 
@@ -24,6 +25,7 @@ class CompanyService {
         print("\nNUMBER OF QUOTES: " + newStock.size())
     }
 
+    //RETURN THE AVERAGE OF STOCKS
     Double getMedia(List<Double> valor) {
         try {
             return getSoma(valor) / valor.size();
@@ -32,6 +34,7 @@ class CompanyService {
         }
     }
 
+    //RETURN THE SUM OF STOCKS
     Double getSoma(List<Double> valor) {
         Double soma = 0;
         for (int i = 0; i < valor.size(); i++) {
@@ -40,6 +43,7 @@ class CompanyService {
         return soma;
     }
 
+    //RETURNS STANDARD DEVIATION OF STOCKS
     Double getDesvioPadrao(List<Double> valor) {
         Double media = getMedia(valor);
         int tam = valor.size();
@@ -51,6 +55,7 @@ class CompanyService {
         return Math.sqrt(desvPadrao / (tam - 1));
     }
 
+    //RETURNS A LIST OF COMPANIES WITH SEGMENT AND STANDART DEVIATION
     def getCompanies(){
         List<Map> listCompanies = []
         def companies = Company.list()
