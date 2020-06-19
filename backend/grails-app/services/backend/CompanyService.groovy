@@ -52,15 +52,15 @@ class CompanyService {
     }
 
     def getCompanies(){
-        Map<String,Map> mapCompanies = [:]
+        List<Map> listCompanies = []
         def companies = Company.list()
         for(Company company : companies){
             Map mapCompany = [:]
             mapCompany['Name'] = company.name
             mapCompany['Segment'] = company.segment
             mapCompany['Deviation'] = getDesvioPadrao(Stock.findAllByCompany(company)?.collect{it.price})
-            mapCompanies[company.id.toString()] = mapCompany
+            listCompanies.add(mapCompany)
         }
-        return mapCompanies
+        return listCompanies
     }
 }
