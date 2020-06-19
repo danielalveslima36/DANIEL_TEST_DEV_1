@@ -8,11 +8,13 @@ import { Company } from '../model/company';
 })
 export class CompanyService {
 
+  //BASE URL
   readonly url = "http://localhost:8080/company/getCompanyDetails"
 
 
   constructor(private httpClient: HttpClient) { }
 
+  //RETURNS ALL THE COMPANIES
   getCompanies(){
    return this.httpClient.get<Company[]>(this.url)
   }

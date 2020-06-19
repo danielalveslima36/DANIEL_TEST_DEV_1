@@ -9,7 +9,10 @@
 <body>
 	
 	<div class="limiter">
-        <button type="button" class="btn btn-primary" (click)="showCompanies()">Get Companies</button>
+		<!-- BUTTON -->
+		<button type="button" class="btn btn-primary" (click)="showCompanies()">Get Companies</button>
+		<!-- BUTTON  -->
+		<!-- TABLE -->
 		<div class="container-table100">
 			<div class="wrap-table100">
 					<div class="table" *ngIf="companies.length > 0">
@@ -40,16 +43,13 @@
 					</div>
 			</div>
 		</div>
+		<!-- TABLE -->
 	</div>
 
-<!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
 	<script src="vendor/bootstrap/js/popper.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
 	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
 </body>

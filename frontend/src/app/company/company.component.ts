@@ -16,6 +16,7 @@ export class CompanyComponent implements OnInit {
   ngOnInit() {
   }
 
+  //SET THE COMPANIES RETURNED AT ATTRIBUTE COMPANIES
   showCompanies(){
     this.companyService.getCompanies().subscribe((companies: Company[]) => {
       this.companies = companies;
