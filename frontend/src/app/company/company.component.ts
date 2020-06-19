@@ -13,8 +13,6 @@ export class CompanyComponent implements OnInit {
 
   constructor(private companyService: CompanyService) { }
 
-  buttonClick: boolean = false;
-
   ngOnInit() {
   }
 
@@ -22,7 +20,6 @@ export class CompanyComponent implements OnInit {
     this.companyService.getCompanies().subscribe((companies: Company[]) => {
       this.companies = companies;
     })
-    this.buttonClick = true
   }  
 
 }

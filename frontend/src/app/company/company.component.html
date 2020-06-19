@@ -9,7 +9,7 @@
 <body>
 	
 	<div class="limiter">
-        <button type="button" class="btn btn-primary" *ngIf="!buttonClick" (click)="showCompanies()">Get Companies</button>
+        <button type="button" class="btn btn-primary" (click)="showCompanies()">Get Companies</button>
 		<div class="container-table100">
 			<div class="wrap-table100">
 					<div class="table" *ngIf="companies.length > 0">
