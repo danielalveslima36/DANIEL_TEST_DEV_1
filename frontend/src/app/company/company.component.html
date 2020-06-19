@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table V02</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	
+	<div class="limiter">
+        <button type="button" class="btn btn-primary" *ngIf="!buttonClick" (click)="showCompanies()">Get Companies</button>
+		<div class="container-table100">
+			<div class="wrap-table100">
+					<div class="table" *ngIf="companies.length > 0">
+
+						<div class="row header">
+							<div class="cell">
+								Name
+							</div>
+							<div class="cell">
+								Segment
+							</div>
+							<div class="cell">
+								Standard Deviation
+							</div>
+						</div>
+
+						<div class="row" *ngFor="let company of companies">
+							<div class="cell" data-title="Full Name">
+								{{company.Name}}
+							</div>
+							<div class="cell" data-title="Age">
+                                {{company.Segment}}
+							</div>
+							<div class="cell" data-title="Job Title">
+                                {{company.Deviation}}
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
