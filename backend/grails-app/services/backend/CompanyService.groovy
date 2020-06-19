@@ -25,7 +25,7 @@ class CompanyService {
         print("\nNUMBER OF QUOTES: " + newStock.size())
     }
 
-    //RETURN THE AVERAGE OF STOCKS
+    //RETURNS THE AVERAGE OF STOCKS
     Double getMedia(List<Double> valor) {
         try {
             return getSoma(valor) / valor.size();
@@ -34,7 +34,7 @@ class CompanyService {
         }
     }
 
-    //RETURN THE SUM OF STOCKS
+    //RETURNS THE SUM OF STOCKS
     Double getSoma(List<Double> valor) {
         Double soma = 0;
         for (int i = 0; i < valor.size(); i++) {
